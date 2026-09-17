@@ -1,54 +1,54 @@
-# Minimal Skill Template
+# 极简技能模板 (Minimal Skill Template)
 
-Use this template for a small skill with one clear purpose.
+用于目标明确、低复杂度的单一职责技能（Skill）。
 
 ```markdown
 ---
 name: example-skill
-description: [Specific action] when [clear trigger or user need].
+description: [具体动作] 当 [明确的触发条件或用户诉求]。
 ---
 
-# Example Skill
+# 示例技能 (Example Skill)
 
-## Purpose
+## 目标 (Purpose)
 
-[One sentence describing the successful outcome.]
+[一句话描述该技能成功执行后达成的结果。]
 
-## When to use
+## 触发时机与范围 (When to use)
 
-Use this skill when:
-- [Trigger 1]
-- [Trigger 2]
+当出现以下情况时使用此技能：
+- [触发条件 1]
+- [触发条件 2]
 
-Do not use it for:
-- [Non-scope 1]
+严禁用于以下场景 (Non-scope)：
+- [非负责范围 1]
 
-## Inputs
+## 输入契约 (Inputs)
 
-Required:
-- [Input]
+必须输入：
+- [必填字段/信息]
 
-Optional:
-- [Input]
+可选输入：
+- [可选字段/信息]
 
-If a required input is missing, [ask / stop / use a declared default].
+若必填输入缺失，则 [询问用户 / 终止流程 / 采用已声明的安全默认值]。
 
-## Procedure
+## 执行规程 (Procedure)
 
-1. [Executable step]
-2. [Executable step]
-3. [Check or transform result]
+1. [可执行步骤 1]
+2. [可执行步骤 2]
+3. [校验或转换结果]
 
-## Output contract
+## 输出契约 (Output contract)
 
-Return:
-- [Exact format]
-- [Required fields]
+返回结果：
+- [确切的交付格式，如 Markdown、JSON 等]
+- [必须包含的字段]
 
-If verification is unavailable, label the result `UNKNOWN` rather than claiming success.
+若无法验证结果的真实性，必须将状态标注为 `UNKNOWN`，严禁脑补成功。
 
-## Failure behavior
+## 异常与边界处理 (Failure behavior)
 
-- [Failure case]: [response]
-- [Out-of-scope case]: [response]
+- [遇到特定错误时]: [应对策略]
+- [遇到超出范围请求时]: [应对策略]
 ```

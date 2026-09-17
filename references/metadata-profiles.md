@@ -1,22 +1,22 @@
-# Metadata Profiles
+# 元数据配置规范 (Metadata Profiles)
 
-## Portable core
+## 通用可移植核心 (Portable Core)
 
-Use only metadata required by the target standard or host. In many skill systems, the safest portable baseline is:
+仅声明目标宿主标准所必需的元数据。在大多数 Agent 技能系统中，最安全且通用的基线元数据仅包含：
 
-- `name`
-- `description`
+- `name`: 技能唯一名称
+- `description`: 技能描述（必须包含触发时机与核心动作）
 
-The exact accepted fields and constraints must be verified for the intended host.
+所有额外字段均须经过目标宿主的确认，否则应移出运行时关键区域。
 
-## Optional extensions
+## 可选扩展字段 (Optional Extensions)
 
-Fields such as `version`, `tags`, `layer`, `upstream`, `downstream`, and `output_schema` may be useful as project metadata, but should not be assumed to affect runtime behavior unless the host documents them.
+诸如 `version`、`tags`、`layer`、`upstream`、`downstream`、`output_schema` 等字段，可作为项目的工程管理元数据记录在文档中；但在未得到宿主官方文档明确支持前，**不得假定它们会影响 Agent 的运行时行为**。
 
-## Metadata checklist
+## 元数据自检清单
 
-- Is the name unique and descriptive?
-- Does the description explain both capability and activation context?
-- Are unsupported fields excluded from the runtime-critical frontmatter?
-- Are project-only fields documented separately?
-- Is the description specific enough to avoid accidental activation?
+- [ ] 技能名称 (`name`) 是否唯一且具描述性？
+- [ ] 描述 (`description`) 是否同时解释了功能与激活时机？
+- [ ] 是否已将未受支持的扩展字段从运行时 frontmatter 中剥离？
+- [ ] 仅用于项目管理的字段是否已单独记录？
+- [ ] 描述是否足够具体，以避免与其他技能发生误触发或冲突？

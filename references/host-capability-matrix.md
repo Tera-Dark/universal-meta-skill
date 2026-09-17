@@ -1,27 +1,27 @@
-# Host Capability Matrix
+# 宿主能力矩阵 (Host Capability Matrix)
 
-This document is a recording template, not a claim that every host supports every feature.
+本表格用于客观记录宿主（平台/模型）的真实支持情况，严禁在缺乏验证证据时假定宿主支持所有功能。
 
-Use the following status values:
+### 状态枚举值：
 
-- `VERIFIED`: confirmed through current documentation or a reproducible test.
-- `PARTIAL`: supported with meaningful limitations.
-- `UNKNOWN`: not verified.
-- `NOT_SUPPORTED`: confirmed unavailable in the tested context.
+- `VERIFIED`: 已通过官方最新文档或可复现的实际测试证实支持。
+- `PARTIAL`: 仅部分支持或存在明显限制。
+- `UNKNOWN`: 未经实际测试验证。
+- `NOT_SUPPORTED`: 已明确证实不支持该特性。
 
-| Capability | Host | Status | Evidence/date | Notes |
+| 能力项 | 宿主平台 | 状态 | 证据 / 验证日期 | 备注 |
 |---|---|---:|---|---|
-| Root `SKILL.md` discovery | [host] | UNKNOWN | [source/date] | [notes] |
-| YAML frontmatter | [host] | UNKNOWN | [source/date] | [notes] |
-| Supporting references | [host] | UNKNOWN | [source/date] | [notes] |
-| Script execution | [host] | UNKNOWN | [source/date] | [notes] |
-| Tool invocation | [host] | UNKNOWN | [source/date] | [notes] |
-| Progressive disclosure | [host] | UNKNOWN | [source/date] | [notes] |
+| 根目录 `SKILL.md` 识别与加载 | [宿主名称] | UNKNOWN | [证据来源/日期] | [备注说明] |
+| YAML Frontmatter 解析 | [宿主名称] | UNKNOWN | [证据来源/日期] | [备注说明] |
+| `references/` 关联文件引用 | [宿主名称] | UNKNOWN | [证据来源/日期] | [备注说明] |
+| 外部脚本执行权限 | [宿主名称] | UNKNOWN | [证据来源/日期] | [备注说明] |
+| 工具链 (Tool) 调用 | [宿主名称] | UNKNOWN | [证据来源/日期] | [备注说明] |
+| 渐进式披露 (Progressive Disclosure) | [宿主名称] | UNKNOWN | [证据来源/日期] | [备注说明] |
 
-## Rules
+## 记录准则
 
-1. Do not infer support from a similarly named product.
-2. Record the tested version or documentation date.
-3. Distinguish parsing support from runtime behavior.
-4. If behavior differs by plan, mode, or configuration, record that condition.
-5. Recheck entries after major host updates.
+1. 严禁仅因同名或相似产品就推定具备某项能力。
+2. 必须记录具体的测试版本号或官方文档日期。
+3. 严格区分“语法解析支持”与“运行时实际行为支持”。
+4. 若不同套餐、模式或配置下的行为存在差异，必须注明测试环境。
+5. 宿主发生大版本更新后，必须重新核验。
