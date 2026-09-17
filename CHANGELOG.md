@@ -1,4 +1,12 @@
-# Changelog
+﻿# Changelog
+
+## 1.2.1
+
+- **Fixed Documentation Typos**: Corrected typo `eferences/` to `references/` and fixed Markdown block formatting in `README.md`.
+- **Refined Host Loading Claims**: Clarified that host discovery, loading, and runtime behaviors differ by platform and must be verified per documentation.
+- **Added Real Host Capability Matrix**: Updated `host-capability-matrix.md` with actual verified records for Google Antigravity and Claude Code.
+- **Added Zero-Dependency Verification Script**: Added `scripts/validate_skill.py` to statically validate frontmatter and reference integrity.
+- **Added Evaluation Test Fixtures**: Added `tests/fixtures/` with test cases for ambiguous input, missing input, and security boundary violations.
 
 ## 1.2.0
 
